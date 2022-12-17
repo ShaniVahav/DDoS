@@ -7,7 +7,7 @@ import re
 PING_INTERVAL = 5
 
 # Set the name of the file to store the ping requests in
-FILE_NAME = "ping_requests.txt"
+FILE_NAME = "pings_results_p.txt"
 
 # Set the IP address or hostname of the machine to ping
 PING_TARGET = "10.0.2.15"

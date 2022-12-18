@@ -47,6 +47,6 @@ def synFlood(victim_ip, victim_port):
     f.close()
 
 
-victim_ip = '10.0.9.1'  # the victim is localhost
+victim_ip = '10.100.102.59'  # the victim is localhost
 victim_port = 80  # apache server is port 80
 synFlood(victim_ip, victim_port)

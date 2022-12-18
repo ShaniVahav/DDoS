@@ -56,4 +56,3 @@ with open(FILE_NAME, "w") as file:
         average_rtt = total_rtt / ping_count
         file.write("Average RTT: " + str(average_rtt))
 
-

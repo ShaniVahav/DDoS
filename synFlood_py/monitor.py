@@ -18,6 +18,10 @@ total_rtt = 0
 # Keep track of the number of pings
 ping_count = 0
 
+
+if os.path.exists('ping_requests.txt'):
+    os.remove('ping_requests.txt')
+
 # Open the file for writing
 with open(FILE_NAME, "w") as file:
     try:

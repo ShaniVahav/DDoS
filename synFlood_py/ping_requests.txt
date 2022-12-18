@@ -1,0 +1,1450 @@
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.240 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.240/0.240/0.240/0.000 ms
+
+
+0.240
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.205 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.205/0.205/0.205/0.000 ms
+
+
+0.205
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.196 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.196/0.196/0.196/0.000 ms
+
+
+0.196
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.284 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.284/0.284/0.284/0.000 ms
+
+
+0.284
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.258 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.258/0.258/0.258/0.000 ms
+
+
+0.258
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.280 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.280/0.280/0.280/0.000 ms
+
+
+0.280
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.380 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.380/0.380/0.380/0.000 ms
+
+
+0.380
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.335 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.335/0.335/0.335/0.000 ms
+
+
+0.335
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.142 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.142/0.142/0.142/0.000 ms
+
+
+0.142
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.321 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.321/0.321/0.321/0.000 ms
+
+
+0.321
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.325 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.325/0.325/0.325/0.000 ms
+
+
+0.325
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.305 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.305/0.305/0.305/0.000 ms
+
+
+0.305
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.197 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.197/0.197/0.197/0.000 ms
+
+
+0.197
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.268 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.268/0.268/0.268/0.000 ms
+
+
+0.268
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.243 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.243/0.243/0.243/0.000 ms
+
+
+0.243
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.219 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.219/0.219/0.219/0.000 ms
+
+
+0.219
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.339 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.339/0.339/0.339/0.000 ms
+
+
+0.339
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.344 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.344/0.344/0.344/0.000 ms
+
+
+0.344
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.331 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.331/0.331/0.331/0.000 ms
+
+
+0.331
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.370 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.370/0.370/0.370/0.000 ms
+
+
+0.370
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.406 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.406/0.406/0.406/0.000 ms
+
+
+0.406
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.392 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.392/0.392/0.392/0.000 ms
+
+
+0.392
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.322 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.322/0.322/0.322/0.000 ms
+
+
+0.322
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.437 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.437/0.437/0.437/0.000 ms
+
+
+0.437
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.355 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.355/0.355/0.355/0.000 ms
+
+
+0.355
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.488 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.488/0.488/0.488/0.000 ms
+
+
+0.488
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.348 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.348/0.348/0.348/0.000 ms
+
+
+0.348
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.350 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.350/0.350/0.350/0.000 ms
+
+
+0.350
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.319 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.319/0.319/0.319/0.000 ms
+
+
+0.319
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.475 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.475/0.475/0.475/0.000 ms
+
+
+0.475
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.487 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.487/0.487/0.487/0.000 ms
+
+
+0.487
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.226 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.226/0.226/0.226/0.000 ms
+
+
+0.226
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.196 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.196/0.196/0.196/0.000 ms
+
+
+0.196
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.460 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.460/0.460/0.460/0.000 ms
+
+
+0.460
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.374 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.374/0.374/0.374/0.000 ms
+
+
+0.374
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.354 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.354/0.354/0.354/0.000 ms
+
+
+0.354
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.393 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.393/0.393/0.393/0.000 ms
+
+
+0.393
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.148 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.148/0.148/0.148/0.000 ms
+
+
+0.148
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.319 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.319/0.319/0.319/0.000 ms
+
+
+0.319
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.433 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.433/0.433/0.433/0.000 ms
+
+
+0.433
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.267 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.267/0.267/0.267/0.000 ms
+
+
+0.267
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.381 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.381/0.381/0.381/0.000 ms
+
+
+0.381
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.409 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.409/0.409/0.409/0.000 ms
+
+
+0.409
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.271 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.271/0.271/0.271/0.000 ms
+
+
+0.271
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.375 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.375/0.375/0.375/0.000 ms
+
+
+0.375
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.223 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.223/0.223/0.223/0.000 ms
+
+
+0.223
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.417 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.417/0.417/0.417/0.000 ms
+
+
+0.417
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.238 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.238/0.238/0.238/0.000 ms
+
+
+0.238
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.362 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.362/0.362/0.362/0.000 ms
+
+
+0.362
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.388 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.388/0.388/0.388/0.000 ms
+
+
+0.388
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.372 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.372/0.372/0.372/0.000 ms
+
+
+0.372
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=1.67 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.669/1.669/1.669/0.000 ms
+
+
+1.67
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.455 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.455/0.455/0.455/0.000 ms
+
+
+0.455
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.393 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.393/0.393/0.393/0.000 ms
+
+
+0.393
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.310 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.310/0.310/0.310/0.000 ms
+
+
+0.310
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.386 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.386/0.386/0.386/0.000 ms
+
+
+0.386
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.372 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.372/0.372/0.372/0.000 ms
+
+
+0.372
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.325 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.325/0.325/0.325/0.000 ms
+
+
+0.325
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.181 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.181/0.181/0.181/0.000 ms
+
+
+0.181
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.402 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.402/0.402/0.402/0.000 ms
+
+
+0.402
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.403 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.403/0.403/0.403/0.000 ms
+
+
+0.403
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.439 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.439/0.439/0.439/0.000 ms
+
+
+0.439
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.456 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.456/0.456/0.456/0.000 ms
+
+
+0.456
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.374 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.374/0.374/0.374/0.000 ms
+
+
+0.374
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.598 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.598/0.598/0.598/0.000 ms
+
+
+0.598
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.424 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.424/0.424/0.424/0.000 ms
+
+
+0.424
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.358 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.358/0.358/0.358/0.000 ms
+
+
+0.358
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.215 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.215/0.215/0.215/0.000 ms
+
+
+0.215
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.162 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.162/0.162/0.162/0.000 ms
+
+
+0.162
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.371 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.371/0.371/0.371/0.000 ms
+
+
+0.371
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.327 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.327/0.327/0.327/0.000 ms
+
+
+0.327
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.450 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.450/0.450/0.450/0.000 ms
+
+
+0.450
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.335 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.335/0.335/0.335/0.000 ms
+
+
+0.335
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.321 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.321/0.321/0.321/0.000 ms
+
+
+0.321
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.469 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.469/0.469/0.469/0.000 ms
+
+
+0.469
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.349 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.349/0.349/0.349/0.000 ms
+
+
+0.349
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.500 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.500/0.500/0.500/0.000 ms
+
+
+0.500
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.345 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.345/0.345/0.345/0.000 ms
+
+
+0.345
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.571 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.571/0.571/0.571/0.000 ms
+
+
+0.571
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.186 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.186/0.186/0.186/0.000 ms
+
+
+0.186
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.537 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.537/0.537/0.537/0.000 ms
+
+
+0.537
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.365 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.365/0.365/0.365/0.000 ms
+
+
+0.365
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.220 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.220/0.220/0.220/0.000 ms
+
+
+0.220
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.309 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.309/0.309/0.309/0.000 ms
+
+
+0.309
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.409 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.409/0.409/0.409/0.000 ms
+
+
+0.409
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.478 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.478/0.478/0.478/0.000 ms
+
+
+0.478
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.315 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.315/0.315/0.315/0.000 ms
+
+
+0.315
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.344 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.344/0.344/0.344/0.000 ms
+
+
+0.344
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.247 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.247/0.247/0.247/0.000 ms
+
+
+0.247
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.349 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.349/0.349/0.349/0.000 ms
+
+
+0.349
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.338 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.338/0.338/0.338/0.000 ms
+
+
+0.338
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.411 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.411/0.411/0.411/0.000 ms
+
+
+0.411
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.352 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.352/0.352/0.352/0.000 ms
+
+
+0.352
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.260 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.260/0.260/0.260/0.000 ms
+
+
+0.260
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.404 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.404/0.404/0.404/0.000 ms
+
+
+0.404
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.508 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.508/0.508/0.508/0.000 ms
+
+
+0.508
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.437 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.437/0.437/0.437/0.000 ms
+
+
+0.437
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.346 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.346/0.346/0.346/0.000 ms
+
+
+0.346
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.168 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.168/0.168/0.168/0.000 ms
+
+
+0.168
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.349 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.349/0.349/0.349/0.000 ms
+
+
+0.349
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.166 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.166/0.166/0.166/0.000 ms
+
+
+0.166
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.466 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.466/0.466/0.466/0.000 ms
+
+
+0.466
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.272 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.272/0.272/0.272/0.000 ms
+
+
+0.272
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.224 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.224/0.224/0.224/0.000 ms
+
+
+0.224
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.273 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.273/0.273/0.273/0.000 ms
+
+
+0.273
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.358 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.358/0.358/0.358/0.000 ms
+
+
+0.358
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.164 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.164/0.164/0.164/0.000 ms
+
+
+0.164
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.269 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.269/0.269/0.269/0.000 ms
+
+
+0.269
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.174 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.174/0.174/0.174/0.000 ms
+
+
+0.174
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.373 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.373/0.373/0.373/0.000 ms
+
+
+0.373
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.233 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.233/0.233/0.233/0.000 ms
+
+
+0.233
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.333 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.333/0.333/0.333/0.000 ms
+
+
+0.333
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.147 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.147/0.147/0.147/0.000 ms
+
+
+0.147
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.198 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.198/0.198/0.198/0.000 ms
+
+
+0.198
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.336 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.336/0.336/0.336/0.000 ms
+
+
+0.336
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.423 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.423/0.423/0.423/0.000 ms
+
+
+0.423
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.386 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.386/0.386/0.386/0.000 ms
+
+
+0.386
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.354 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.354/0.354/0.354/0.000 ms
+
+
+0.354
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.323 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.323/0.323/0.323/0.000 ms
+
+
+0.323
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.353 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.353/0.353/0.353/0.000 ms
+
+
+0.353
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.172 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.172/0.172/0.172/0.000 ms
+
+
+0.172
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.203 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.203/0.203/0.203/0.000 ms
+
+
+0.203
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.365 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.365/0.365/0.365/0.000 ms
+
+
+0.365
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.468 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.468/0.468/0.468/0.000 ms
+
+
+0.468
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.437 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.437/0.437/0.437/0.000 ms
+
+
+0.437
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.394 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.394/0.394/0.394/0.000 ms
+
+
+0.394
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.452 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.452/0.452/0.452/0.000 ms
+
+
+0.452
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.399 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.399/0.399/0.399/0.000 ms
+
+
+0.399
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.241 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.241/0.241/0.241/0.000 ms
+
+
+0.241
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.346 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.346/0.346/0.346/0.000 ms
+
+
+0.346
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.178 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.178/0.178/0.178/0.000 ms
+
+
+0.178
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.367 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.367/0.367/0.367/0.000 ms
+
+
+0.367
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.202 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.202/0.202/0.202/0.000 ms
+
+
+0.202
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.209 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.209/0.209/0.209/0.000 ms
+
+
+0.209
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.509 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.509/0.509/0.509/0.000 ms
+
+
+0.509
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.282 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.282/0.282/0.282/0.000 ms
+
+
+0.282
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.738 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.738/0.738/0.738/0.000 ms
+
+
+0.738
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.345 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.345/0.345/0.345/0.000 ms
+
+
+0.345
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.280 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.280/0.280/0.280/0.000 ms
+
+
+0.280
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.377 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.377/0.377/0.377/0.000 ms
+
+
+0.377
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.266 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.266/0.266/0.266/0.000 ms
+
+
+0.266
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.337 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.337/0.337/0.337/0.000 ms
+
+
+0.337
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.608 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.608/0.608/0.608/0.000 ms
+
+
+0.608
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.441 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.441/0.441/0.441/0.000 ms
+
+
+0.441
+
+PING 10.100.102.59 (10.100.102.59) 56(84) bytes of data.
+64 bytes from 10.100.102.59: icmp_seq=1 ttl=64 time=0.404 ms
+
+--- 10.100.102.59 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.404/0.404/0.404/0.000 ms
+
+
+0.404

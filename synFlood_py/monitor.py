@@ -10,7 +10,7 @@ PING_INTERVAL = 5
 FILE_NAME = "pings_results_p.txt"
 
 # Set the IP address or hostname of the machine to ping
-PING_TARGET = "10.0.2.15"
+PING_TARGET = "10.100.102.59"
 
 # Keep track of the total round-trip time for all pings
 total_rtt = 0

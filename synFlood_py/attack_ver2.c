@@ -1,3 +1,4 @@
+//https://www.binarytides.com/syn-flood-dos-attack/
 
 #include <stdint.h>
 #include <time.h>
@@ -77,13 +78,8 @@ int main (void)
     for (int i = 0; i < NUM_ITERATIONS; i++) {
         for (int j= 0; j < NUM_PACKETS; j++) {
             char rnd_src[16];
-            int num[4];
             //RandomIP
-            for (int i = 0; i < 4; i++) {
-                num[i] = (rand() % (256));
-            }
-
-            sprintf(rnd_src, "%d.%d.%d.%d", num[0], num[1], num[2], num[3]);
+            sprintf(rnd_src, "%d.%d.%d.%d", (rand() % (256)), (rand() % (256)), (rand() % (256)), (rand() % (256)));
             long start_one = clock();
             
             

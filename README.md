@@ -39,15 +39,47 @@ Apache is only as secure as the system it is running on, and if the underlying o
 ### Lab results - 
 ***About the DDOS Attack and the differences between them***
 
-> *syn_packet_c && syn_packet_p *
+> ***syn_packet_c && syn_packet_p***
    
-   *C -* The attack ended quickly and most of the packets were sent in a similarly fast time of 0.00001-            0.00002 milliseconds
-         Elapsed time: 2.829994 (sec)
-         Average time to send a packet: 0.000003 seconds
+   *C -* 
+   The attack ended quickly and most of the packets were sent in a similarly fast time of 0.00001-         
+   0.00002 milliseconds
    
-   *Python -* After several failed attempts to run the attack (the machines crashed) we managed to run the               attack and it managed to send just half a million packets until the machines crashed again
-              - the time to send the packet varies but the majority is around 0.04 milliseconds.
-                Elapsed time: 8 hours
+    Elapsed time: 2.829994 (sec)
+    Average time to send a packet: 0.000003 seconds
+
+   
+   
+   *Python -* 
+   After several failed attempts to run the attack (the machines crashed) we managed to run the               attack and it managed to send just half a million packets until the machines crashed again
+    the time to send the packet varies but the majority is around 0.04 milliseconds.
+    
+    Elapsed time: 8 hours
+
+For the C attack the packets were sent many times faster than the Python attack. The speed of sending packets makes the attack stronger and in a better quality
+
+
+> ***Pings_c && Pings_p***
+   
+   *C -* 
+The program ended quickly and we sent a ping every five seconds, we did not see sharp              fluctuations in the return times of the pingץ
+   
+     Average RTT: 2.395909090909091
+   
+   
+   *Python -* 
+While running the Python program, something interesting happened, a certain sampler of pings had significantly higher RTT than the others, and we even got to the point where the Internet of the machine running the Apache server went down due to the attack.
+However, in most pings the time was similar.
+  
+    Average RTT: 1.5961964795432948
+
+
+### ***conclusion -***
+
+In terms of running times, the program in C is better.
+However for the same amount of packets, the program in C was not able to achieve the same effectiveness that the program in Python achieved - long ping's return times and maybe if it is related to the attack,
+The fall of the Internet in the machine of the Apache server.
+If we increase the amount of sending packets in the C program and increase the amount of computers that will run the program, we *may* reach the effectiveness that was in Python with much less running time
 
 
 

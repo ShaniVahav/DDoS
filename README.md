@@ -45,7 +45,7 @@ Apache is only as secure as the system it is running on, and if the underlying o
    The attack ended quickly and most of the packets were sent in a similarly fast time of 0.00001-         
    0.00002 milliseconds
    
-    Elapsed time: 2.829994 (sec)
+    Elapsed time: 28.29994 (sec)
     Average time to send a packet: 0.000003 seconds
 
    

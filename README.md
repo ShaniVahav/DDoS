@@ -36,6 +36,19 @@ However, like any web server, an Apache server can be vulnerable to DDOS attacks
 
 Apache is only as secure as the system it is running on, and if the underlying operating system is vulnerable to attack, the Apache server may also be at risk.
 
+### Lab results - 
+***About the DDOS Attack and the differences between them***
+
+> *syn_packet_c && syn_packet_p *
+   
+   *C -* The attack ended quickly and most of the packets were sent in a similarly fast time of 0.00001-            0.00002 milliseconds
+         Elapsed time: 2.829994 (sec)
+         Average time to send a packet: 0.000003 seconds
+   
+   *Python -* After several failed attempts to run the attack (the machines crashed) we managed to run the               attack and it managed to send just half a million packets until the machines crashed again
+              - the time to send the packet varies but the majority is around 0.04 milliseconds.
+                Elapsed time: 8 hours
+
 
 
 
